@@ -1,10 +1,11 @@
 package com.guilhermelf.springboot2essentials.requests;
 
+import lombok.Builder;
 import lombok.Data;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 @Data
+@Builder
 public class AnimePostRequestBody {
     @NotEmpty(message = "The name of the anime cannot be empty")
     private String name;

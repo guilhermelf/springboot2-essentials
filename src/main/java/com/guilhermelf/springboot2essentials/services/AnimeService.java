@@ -45,10 +45,10 @@ public class AnimeService {
         animeRepository.deleteById(id);
     }
 
-    public Anime replace(AnimePutRequestBody animePutRequestBody) {
+    public void replace(AnimePutRequestBody animePutRequestBody) {
         Anime savedAnime = findByIdOrThrowBadRequestException(animePutRequestBody.getId());
         Anime anime = AnimeMapper.INSTANCE.toAnime(animePutRequestBody);
         anime.setId(savedAnime.getId());
-        return animeRepository.save(anime);
+        animeRepository.save(anime);
     }
 }
