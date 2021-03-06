@@ -15,3 +15,14 @@ logging:
     org:
       hibernate:
         SQL: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics, prometheus
+
+info:
+  app: Spring Boot 2 essentials
+  email: guilherme.lf@gmail.com
+  github: https://github.com/guilhermelf/springboot2-essentials
